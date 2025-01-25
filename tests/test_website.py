@@ -4,6 +4,8 @@ from huggingface_hub import login
 # Hugging Face API token'ınızı buraya ekleyin
 
 # Hugging Face modelini doğru şekilde başlatmak
+token = "***********" 
+login(token=token)
 agent = CodeAgent(tools=[DuckDuckGoSearchTool()], model=HfApiModel(),
     additional_authorized_imports=[
         "selenium",
